@@ -30,8 +30,7 @@ section.board {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 10px;
-  width: 300px;
-  margin: 20px;
+  margin: 20px auto;
 }
 
 .square {
