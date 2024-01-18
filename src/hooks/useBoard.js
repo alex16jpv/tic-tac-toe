@@ -1,4 +1,5 @@
 import { useState } from "react";
+import confetti from "canvas-confetti";
 import { checkEndGame, checkWinner } from "../utils/helpers";
 import { TURNS } from "../utils/constants";
 
@@ -20,6 +21,7 @@ export default function useBoard() {
     const isGameOver = checkEndGame(newBoard);
     if (isWinner) {
       setWinner(isWinner);
+      confetti();
     } else if (isGameOver) {
       setWinner(TURNS.DRAW);
     }
